@@ -1,0 +1,276 @@
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0b1120;
+    color: white;
+}
+
+/* NAVBAR */
+header {
+    background: #111827;
+    padding: 20px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 26px;
+}
+
+.logo span,
+.heading span,
+.home-content h1 span {
+    color: #38bdf8;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #38bdf8;
+}
+
+/* HOME */
+.home {
+    min-height: 90vh;
+    padding: 80px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.subtitle {
+    color: #38bdf8;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.home-content h1 {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.home-content h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.home-content p {
+    line-height: 1.8;
+    color: #cbd5e1;
+}
+
+.home-image img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #38bdf8;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 25px;
+    background: #38bdf8;
+    color: #0b1120;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+/* SECTION */
+section {
+    padding: 80px 8%;
+}
+
+.heading {
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* ABOUT */
+.about {
+    background: #111827;
+    text-align: center;
+}
+
+.about-content {
+    max-width: 750px;
+    margin: auto;
+}
+
+.about-content h3 {
+    margin-bottom: 20px;
+    color: #38bdf8;
+}
+
+.about-content p {
+    line-height: 1.8;
+    color: #cbd5e1;
+}
+
+/* SKILLS */
+.skill-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.skill-box {
+    background: #1e293b;
+    padding: 30px 20px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.skill-box:hover {
+    transform: translateY(-8px);
+    background: #334155;
+}
+
+.skill-box h3 {
+    color: #38bdf8;
+    margin-bottom: 15px;
+}
+
+.skill-box p {
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+/* PROJECTS */
+.projects {
+    background: #111827;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.project-box {
+    background: #1e293b;
+    padding: 35px 20px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.project-box:hover {
+    transform: translateY(-8px);
+}
+
+.project-box h3 {
+    color: #38bdf8;
+    margin-bottom: 15px;
+}
+
+.project-box p {
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+/* CONTACT */
+.contact {
+    text-align: center;
+}
+
+.contact-info {
+    margin-top: 25px;
+    line-height: 2.5;
+    color: #cbd5e1;
+}
+
+/* FOOTER */
+footer {
+    background: #111827;
+    text-align: center;
+    padding: 25px;
+    color: #94a3b8;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .home {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .home-content h1 {
+        font-size: 32px;
+    }
+
+    .home-image img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .skill-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .skill-container {
+        grid-template-columns: 1fr;
+    }
+
+    .heading {
+        font-size: 28px;
+    }
+}
